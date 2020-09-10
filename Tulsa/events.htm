@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<!-- 
+Ravil Mukhamedov
+17 October 2014
+-->
+
+   <title>Upcoming Events at Tulsa</title>
+   <link href="tulsa.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="dates.js"></script>
+   <script type="text/javascript">
+	//<![CDATA[
+		function showCountdown(){
+			var today = new Date(2011, 3, 4, 10, 35, 22, 0);
+			var date1 = new Date(2011, 0, 14, 10, 0, 0);
+			var date2 = new Date(2011, 4, 21, 12, 0, 0);
+			var date3 = new Date(2011, 6, 4, 21, 0, 0);
+			var date4 = new Date(2011, 8, 1, 12, 0, 0);
+			var date5 = new Date(2011, 11, 1, 11, 30, 0);
+			var date6 = new Date(2011, 11, 31, 15, 30, 0);
+			document.getElementById("thisDay").value = showDateTime(today);
+			changeYear(today, date1);
+			changeYear(today, date2);
+			changeYear(today, date3);
+			changeYear(today, date4);
+			changeYear(today, date5);
+			changeYear(today, date6);
+			document.getElementById("count1").value = countdown(today, date1);
+			document.getElementById("count2").value = countdown(today, date2);
+			document.getElementById("count3").value = countdown(today, date3);
+			document.getElementById("count4").value = countdown(today, date4);
+			document.getElementById("count5").value = countdown(today, date5);
+			document.getElementById("count6").value = countdown(today, date6);	
+		}
+	//]]>
+	</script>
+</head>
+
+<body onload="showCountdown()">
+<form name="eventform" id="eventform" action="">
+
+<div id="logo">
+   <img src="logo.jpg" alt="Tulsa Events" />
+</div>
+<div id="links">
+   <a href="#">Home</a>
+   <a href="#">City Services</a>
+   <a href="#">City Agencies</a>
+   <a href="#">Mayor's Office</a>
+   <a href="#">News Today</a>
+   <a href="#">Upcoming Events</a>
+   <a href="#">Site Map</a>
+   <a href="#">Search Engine</a>
+   <a href="#">Public Notices</a>
+   <a href="#">Survey Form</a>
+   <a href="#">Contact Us</a>
+   <a href="#">E-Government</a>
+</div>
+
+
+<div id="main">
+<h3>Countdown to Upcoming Events</h3>
+<table>
+<tr>
+   <th colspan="2" style="text-align: right">Current Date and Time</th>
+   <td><input name="thisDay" id="thisDay" readonly="readonly" size="40" /></td>
+</tr>
+<tr>
+   <th>Event</th>
+   <th>Starting Time</th>
+   <th>Countdown to Event</th>
+</tr>
+<tr>
+   <td><input value="Heritage Day" readonly="readonly" size="20" /></td>
+   <td><input value="Jan 14 at 10:00 a.m." readonly="readonly" size="20" /></td>
+   <td><input name="count1" id="count1" size="40" /></td>
+</tr>
+<tr>
+   <td><input value="Spring Day Rally" readonly="readonly" size="20" /></td>
+   <td><input value="May 21 at 12:00 p.m." readonly="readonly" size="20" /></td>
+   <td><input name="count2" id="count2" size="40" /></td>
+</tr>
+<tr>
+   <td><input value="July 4th Fireworks" readonly="readonly" size="20" /></td>
+   <td><input value="Jul 4 at 9:00 p.m." readonly="readonly" size="20" /></td>
+   <td><input name="count3" id="count3" size="40" /></td>
+</tr>
+<tr>
+   <td><input value="Summer Bash" readonly="readonly" size="20" /></td>
+   <td><input value="Sep 1 at 12:00 p.m." readonly="readonly" size="20" /></td>
+   <td><input name="count4" id="count4" size="40" /></td>
+</tr><tr>
+   <td><input value="Holiday Party" readonly="readonly" size="20" /></td>
+   <td><input value="Dec 1 at 11:30 a.m." readonly="readonly" size="20" /></td>
+   <td><input name="count5" id="count5" size="40" /></td>
+</tr>
+<tr>
+   <td><input value="New Year's Bash" readonly="readonly" size="20" /></td>
+   <td><input value="Dec 31 at 3:30 p.m." readonly="readonly" size="20" /></td>
+   <td><input name="count6" id="count6" size="40" /></td>
+</tr>
+</table>
+</div>
+
+</form>
+</body>
+</html>
